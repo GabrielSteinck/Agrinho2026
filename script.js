@@ -1,115 +1,161 @@
-// ========== FUNCIONALIDADES DO SITE ==========
+/* =========================
+   ACESSIBILIDADE
+========================= */
 
-// 1. QUIZ SOBRE SUSTENTABILIDADE DA ÁGUA
-// Perguntas e opções
+let tamanhoFonte = 16;
+
+const botaoAumentar = document.getElementById("aumentar-fonte");
+const botaoDiminuir = document.getElementById("diminuir-fonte");
+const botaoContraste = document.getElementById("alto-contraste");
+
+botaoAumentar.addEventListener("click", () => {
+    tamanhoFonte += 2;
+    document.body.style.fontSize = tamanhoFonte + "px";
+});
+
+botaoDiminuir.addEventListener("click", () => {
+
+    if (tamanhoFonte > 12) {
+        tamanhoFonte -= 2;
+        document.body.style.fontSize = tamanhoFonte + "px";
+    }
+
+});
+
+botaoContraste.addEventListener("click", () => {
+    document.body.classList.toggle("alto-contraste");
+});
+
+/* =========================
+   QUIZ
+========================= */
+
 const perguntas = [
     {
-        texto: "1. Qual é a porcentagem aproximada de água doce consumida pela agricultura no mundo?",
-        opcoes: ["30%", "50%", "70%", "90%"],
-        correta: 2 // índice 2 = 70%
+        pergunta: "1. Qual é uma forma sustentável de economizar água na agricultura?",
+        opcoes: [
+            "Irrigação eficiente",
+            "Desperdício constante",
+            "Poluição dos rios"
+        ],
+        correta: 0
     },
+
     {
-        texto: "2. Qual técnica de irrigação é mais eficiente para evitar o desperdício de água?",
-        opcoes: ["Irrigação por inundação", "Irrigação por gotejamento", "Aspersão convencional", "Canal aberto"],
-        correta: 1
+        pergunta: "2. Por que a água é importante para a agricultura?",
+        opcoes: [
+            "Porque ajuda na produção de alimentos",
+            "Porque aumenta a poluição",
+            "Porque destrói plantações"
+        ],
+        correta: 0
     },
+
     {
-        texto: "3. O que é uma prática sustentável para economizar água na agricultura?",
-        opcoes: ["Desviar rios", "Usar água potável para tudo", "Captar água da chuva", "Irrigar ao meio-dia"],
-        correta: 2
+        pergunta: "3. O desperdício de água pode causar:",
+        opcoes: [
+            "Problemas ambientais",
+            "Mais preservação",
+            "Mais chuvas"
+        ],
+        correta: 0
     },
+
     {
-        texto: "4. Por que o desperdício de água na agricultura é um problema ambiental?",
-        opcoes: ["Porque sobra pouca água para as cidades", "Porque afeta rios e nascentes", "Porque deixa o solo mais fértil", "Porque ajuda as plantas"],
-        correta: 1
+        pergunta: "4. O que deve ser preservado para garantir água no futuro?",
+        opcoes: [
+            "Nascentes e rios",
+            "Lixões",
+            "Áreas poluídas"
+        ],
+        correta: 0
     },
+
     {
-        texto: "5. Qual destes ajuda a monitorar a necessidade real de água no solo?",
-        opcoes: ["Sensores de umidade", "Barragens", "Fogos de artifício", "Adubação química"],
+        pergunta: "5. Qual é o objetivo da agricultura sustentável?",
+        opcoes: [
+            "Produzir alimentos e preservar o meio ambiente",
+            "Desperdiçar recursos",
+            "Aumentar a poluição"
+        ],
         correta: 0
     }
 ];
 
-// Função para carregar o quiz no HTML
-function carregarQuiz() {
-    const container = document.getElementById("quizContainer");
-    if (!container) return;
+let perguntaAtual = 0;
+let pontuacao = 0;
 
-    let html = "";
-    for (let i = 0; i < perguntas.length; i++) {
-        const p = perguntas[i];
-        html += `<div class="pergunta">`;
-        html += `<p>${p.texto}</p>`;
-        for (let j = 0; j < p.opcoes.length; j++) {
-            html += `<label>
-                        <input type="radio" name="q${i}" value="${j}">
-                        ${p.opcoes[j]}
-                     </label><br>`;
-        }
-        html += `</div>`;
-    }
-    container.innerHTML = html;
+const textoPergunta = document.getElementById("pergunta");
+const botoesOpcao = document.querySelectorAll(".opcao");
+const resultado = document.getElementById("resultado");
+
+function carregarPergunta() {
+
+    const pergunta = perguntas[perguntaAtual];
+
+    textoPergunta.textContent = pergunta.pergunta;
+
+    botoesOpcao.forEach((botao, indice) => {
+
+        botao.style.display = "block";
+
+        botao.textContent = pergunta.opcoes[indice];
+
+        botao.onclick = () => verificarResposta(indice);
+    });
 }
 
-// Função para corrigir o quiz
-function corrigirQuiz() {
-    let acertos = 0;
-    for (let i = 0; i < perguntas.length; i++) {
-        const opcoes = document.getElementsByName(`q${i}`);
-        let selecionado = -1;
-        for (let j = 0; j < opcoes.length; j++) {
-            if (opcoes[j].checked) {
-                selecionado = j;
-                break;
-            }
-        }
-        if (selecionado === perguntas[i].correta) {
-            acertos++;
-        }
+function verificarResposta(indiceEscolhido) {
+
+    if (
+        indiceEscolhido ===
+        perguntas[perguntaAtual].correta
+    ) {
+        pontuacao++;
     }
-    const resultado = document.getElementById("resultadoQuiz");
-    resultado.innerHTML = `Você acertou ${acertos} de ${perguntas.length} perguntas. 
-    ${acertos === 5 ? "🌱 Parabéns! Você é um guardião da água!" : "💧 Continue aprendendo para evitar o desperdício!"}`;
-}
 
-// 2. FUNÇÕES DE ACESSIBILIDADE
-let tamanhoFonteAtual = 100; // em %
+    perguntaAtual++;
 
-function aumentarFonte() {
-    if (tamanhoFonteAtual < 140) {
-        tamanhoFonteAtual += 10;
-        document.body.style.fontSize = tamanhoFonteAtual + "%";
+    if (perguntaAtual < perguntas.length) {
+
+        carregarPergunta();
+
+    } else {
+
+        finalizarQuiz();
+
     }
 }
 
-function diminuirFonte() {
-    if (tamanhoFonteAtual > 80) {
-        tamanhoFonteAtual -= 10;
-        document.body.style.fontSize = tamanhoFonteAtual + "%";
+function finalizarQuiz() {
+
+    textoPergunta.textContent = "Quiz Finalizado!";
+
+    botoesOpcao.forEach(botao => {
+        botao.style.display = "none";
+    });
+
+    let mensagem = "";
+
+    if (pontuacao === 5) {
+
+        mensagem =
+            "🌟 Parabéns! Você acertou todas as questões e demonstrou excelente conhecimento sobre sustentabilidade da água.";
+
+    } else if (pontuacao >= 3) {
+
+        mensagem =
+            "✅ Muito bem! Você possui um bom conhecimento sobre o uso sustentável da água.";
+
+    } else {
+
+        mensagem =
+            "📚 Continue estudando. A preservação da água é muito importante para o futuro da agricultura.";
+
     }
+
+    resultado.innerHTML =
+        `Você acertou <strong>${pontuacao}</strong> de ${perguntas.length} questões.<br><br>${mensagem}`;
 }
 
-function ativarAltoContraste() {
-    document.body.classList.toggle("alto-contraste");
-}
-
-// 3. EVENTOS E INICIALIZAÇÃO
-document.addEventListener("DOMContentLoaded", function() {
-    // Carregar o quiz
-    carregarQuiz();
-
-    // Botão enviar quiz
-    const btnEnviar = document.getElementById("enviarQuiz");
-    if (btnEnviar) {
-        btnEnviar.addEventListener("click", corrigirQuiz);
-    }
-
-    // Botões de acessibilidade
-    const btnAumentar = document.getElementById("aumentarFonte");
-    const btnDiminuir = document.getElementById("diminuirFonte");
-    const btnContraste = document.getElementById("altoContraste");
-
-    if (btnAumentar) btnAumentar.addEventListener("click", aumentarFonte);
-    if (btnDiminuir) btnDiminuir.addEventListener("click", diminuirFonte);
-    if (btnContraste) btnContraste.addEventListener("click", ativarAltoContraste);
-});
+carregarPergunta();
