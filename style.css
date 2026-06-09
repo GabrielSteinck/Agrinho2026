@@ -1,3 +1,7 @@
+/* =======================
+   CONFIGURAÇÕES GERAIS
+======================= */
+
 *{
     margin:0;
     padding:0;
@@ -5,67 +9,215 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#eef7f1;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eef8f2;
+    color:#333;
+    line-height:1.6;
+    transition:0.3s;
 }
+
+/* =======================
+   ACESSIBILIDADE
+======================= */
+
+.acessibilidade{
+    position:fixed;
+    right:15px;
+    bottom:15px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    z-index:1000;
+}
+
+.acessibilidade button{
+    background:#1f6e8c;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.acessibilidade button:hover{
+    background:#174f66;
+}
+
+/* =======================
+   CABEÇALHO
+======================= */
 
 header{
     background:linear-gradient(135deg,#2e8b57,#1f6e8c);
     color:white;
     text-align:center;
-    padding:30px;
+    padding:30px 20px;
 }
 
 header h1{
     font-size:3rem;
+    margin-bottom:10px;
 }
+
+header p{
+    max-width:800px;
+    margin:auto;
+}
+
+nav{
+    margin-top:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* =======================
+   BANNER
+======================= */
 
 .banner{
     background-image:url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600");
     background-size:cover;
     background-position:center;
-    color:white;
+    min-height:500px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
     text-align:center;
-    padding:120px 20px;
 }
 
-.banner h2{
+.banner-texto{
+    background:rgba(0,0,0,0.5);
+    color:white;
+    padding:30px;
+    border-radius:15px;
+    max-width:700px;
+}
+
+.banner-texto h2{
     font-size:3rem;
+    margin-bottom:15px;
 }
 
-.banner p{
-    font-size:1.2rem;
-}
+/* =======================
+   CARTÕES
+======================= */
 
-.card{
+.cartao{
     background:white;
-    max-width:1000px;
+    max-width:1100px;
     margin:30px auto;
     padding:25px;
     border-radius:15px;
     box-shadow:0 4px 12px rgba(0,0,0,0.15);
 }
 
-.card h2{
+.cartao h2{
     color:#1f6e8c;
     margin-bottom:15px;
 }
 
+/* =======================
+   IMAGENS
+======================= */
+
 .imagem{
     width:100%;
     border-radius:10px;
-    margin-bottom:15px;
+    margin:15px 0;
 }
 
-ul{
-    margin-left:20px;
+/* =======================
+   DADOS
+======================= */
+
+.dados{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
 }
 
-li{
+.caixa{
+    flex:1;
+    min-width:220px;
+    background:#1f6e8c;
+    color:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.caixa h3{
+    font-size:2rem;
     margin-bottom:10px;
 }
 
-button{
+/* =======================
+   CARDS
+======================= */
+
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    flex:1;
+    min-width:250px;
+    background:#e9f7ee;
+    padding:20px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#2e8b57;
+    margin-bottom:10px;
+}
+
+/* =======================
+   GALERIA
+======================= */
+
+.galeria{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.galeria img{
+    width:300px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.05);
+}
+
+/* =======================
+   QUIZ
+======================= */
+
+#quiz button{
     display:block;
     width:100%;
     margin-top:10px;
@@ -78,23 +230,49 @@ button{
     cursor:pointer;
 }
 
-button:hover{
+#quiz button:hover{
     background:#246b44;
 }
 
 #resultado{
     margin-top:20px;
-    font-size:20px;
     font-weight:bold;
+    font-size:18px;
 }
+
+/* =======================
+   RODAPÉ
+======================= */
 
 footer{
     background:#1f6e8c;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
     margin-top:30px;
 }
+
+/* =======================
+   ALTO CONTRASTE
+======================= */
+
+.alto-contraste{
+    background:black;
+    color:white;
+}
+
+.alto-contraste .cartao{
+    background:#111;
+    color:white;
+}
+
+.alto-contraste h2{
+    color:yellow;
+}
+
+/* =======================
+   RESPONSIVO
+======================= */
 
 @media(max-width:768px){
 
@@ -102,8 +280,17 @@ footer{
         font-size:2rem;
     }
 
-    .banner h2{
+    .banner-texto h2{
         font-size:2rem;
+    }
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    .galeria img{
+        width:100%;
     }
 
 }
