@@ -1,7 +1,3 @@
-/* =========================
-   CONFIGURAÇÕES GERAIS
-========================= */
-
 *{
     margin:0;
     padding:0;
@@ -9,315 +5,96 @@
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5fff7;
-    color:#333;
-    line-height:1.7;
-    transition:0.3s;
+    font-family:Arial, sans-serif;
+    background:#eef7f1;
 }
-
-/* =========================
-   ACESSIBILIDADE
-========================= */
-
-.painel-acessibilidade{
-    position:fixed;
-    right:15px;
-    bottom:15px;
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-    z-index:999;
-}
-
-.painel-acessibilidade button{
-    border:none;
-    padding:10px;
-    border-radius:8px;
-    cursor:pointer;
-    background:#1f6e8c;
-    color:white;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.painel-acessibilidade button:hover{
-    transform:scale(1.05);
-}
-
-/* =========================
-   HEADER
-========================= */
 
 header{
-    background:linear-gradient(
-        135deg,
-        #2e8b57,
-        #1f6e8c
-    );
-
+    background:linear-gradient(135deg,#2e8b57,#1f6e8c);
     color:white;
     text-align:center;
-    padding:30px 20px;
+    padding:30px;
 }
 
 header h1{
     font-size:3rem;
-    margin-bottom:10px;
 }
-
-header p{
-    max-width:700px;
-    margin:auto;
-}
-
-nav{
-    margin-top:20px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 12px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#d9ffea;
-}
-
-/* =========================
-   BANNER
-========================= */
 
 .banner{
-    background-image:url(
-    "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600"
-    );
-
+    background-image:url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600");
     background-size:cover;
     background-position:center;
-
-    min-height:450px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
     color:white;
-}
-
-.banner-conteudo{
-    background:rgba(0,0,0,0.55);
-    padding:30px;
-    border-radius:15px;
-    max-width:800px;
+    text-align:center;
+    padding:120px 20px;
 }
 
 .banner h2{
-    font-size:2.8rem;
-    margin-bottom:15px;
+    font-size:3rem;
 }
 
 .banner p{
     font-size:1.2rem;
 }
 
-/* =========================
-   SEÇÕES
-========================= */
-
-section{
-    padding:40px 20px;
-}
-
-.cartao{
-    max-width:1000px;
-    margin:auto;
+.card{
     background:white;
+    max-width:1000px;
+    margin:30px auto;
     padding:25px;
     border-radius:15px;
-
-    box-shadow:
-    0 4px 15px rgba(0,0,0,0.1);
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
 }
 
-.cartao h2{
+.card h2{
     color:#1f6e8c;
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
-.cartao p{
-    margin-top:15px;
-}
-
-/* =========================
-   IMAGENS
-========================= */
-
-img{
+.imagem{
     width:100%;
-    border-radius:12px;
-    margin-top:15px;
-}
-
-/* =========================
-   ESTATÍSTICAS
-========================= */
-
-.estatisticas{
-    display:flex;
-    gap:20px;
-    margin-top:25px;
-    flex-wrap:wrap;
-}
-
-.caixa{
-    flex:1;
-    min-width:220px;
-
-    background:#1f6e8c;
-    color:white;
-
-    padding:20px;
     border-radius:10px;
-    text-align:center;
+    margin-bottom:15px;
 }
-
-.caixa h3{
-    font-size:2rem;
-    margin-bottom:10px;
-}
-
-/* =========================
-   CARDS
-========================= */
-
-.cards{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.card{
-    flex:1;
-    min-width:220px;
-
-    background:#e8f7ef;
-
-    padding:20px;
-    border-radius:10px;
-
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card h3{
-    margin-bottom:10px;
-    color:#2e8b57;
-}
-
-/* =========================
-   LISTA
-========================= */
 
 ul{
-    margin-left:25px;
+    margin-left:20px;
 }
 
 li{
     margin-bottom:10px;
 }
 
-/* =========================
-   QUIZ
-========================= */
-
-#area-quiz{
-    margin-top:20px;
-    background:#f0fbff;
-    padding:25px;
-    border-radius:10px;
-}
-
-#pergunta{
-    margin-bottom:20px;
-}
-
-.opcao{
+button{
     display:block;
     width:100%;
-
-    margin-bottom:10px;
+    margin-top:10px;
     padding:12px;
-
     border:none;
     border-radius:8px;
-
     background:#2e8b57;
     color:white;
-
+    font-size:16px;
     cursor:pointer;
-
-    transition:0.3s;
 }
 
-.opcao:hover{
-    background:#256f47;
+button:hover{
+    background:#246b44;
 }
 
 #resultado{
     margin-top:20px;
+    font-size:20px;
     font-weight:bold;
-    font-size:1.2rem;
 }
-
-/* =========================
-   FOOTER
-========================= */
 
 footer{
     background:#1f6e8c;
     color:white;
     text-align:center;
-    padding:25px;
+    padding:20px;
+    margin-top:30px;
 }
-
-/* =========================
-   ALTO CONTRASTE
-========================= */
-
-.alto-contraste{
-    background:black;
-    color:white;
-}
-
-.alto-contraste .cartao{
-    background:#111;
-    color:white;
-}
-
-.alto-contraste h2{
-    color:yellow;
-}
-
-.alto-contraste footer{
-    background:black;
-}
-
-.alto-contraste header{
-    background:black;
-}
-
-/* =========================
-   RESPONSIVIDADE
-========================= */
 
 @media(max-width:768px){
 
@@ -327,19 +104,6 @@ footer{
 
     .banner h2{
         font-size:2rem;
-    }
-
-    nav a{
-        display:block;
-        margin:10px 0;
-    }
-
-    .cards{
-        flex-direction:column;
-    }
-
-    .estatisticas{
-        flex-direction:column;
     }
 
 }
