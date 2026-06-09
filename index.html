@@ -1,88 +1,244 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vida da Água</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida da Água</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>💧 Vida da Água</h1>
-    <p>Agro forte, futuro sustentável</p>
-</header>
+    <!-- Acessibilidade -->
+    <div class="acessibilidade">
+        <button id="aumentar">A+</button>
+        <button id="diminuir">A-</button>
+        <button id="contraste">🌓</button>
+    </div>
 
-<section class="banner">
-    <h2>Cada gota conta!</h2>
-    <p>Combater o desperdício de água é garantir um futuro melhor.</p>
-</section>
+    <!-- Cabeçalho -->
+    <header>
 
-<main>
+        <h1>💧 Vida da Água</h1>
 
-<section class="card">
-    <h2>🌎 O Problema</h2>
+        <p>
+            Agro forte, futuro sustentável:
+            equilíbrio entre produção e meio ambiente.
+        </p>
 
-    <img
-    class="imagem"
-    src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1200"
-    alt="Plantação agrícola">
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#tema">Tema</a>
+            <a href="#problema">Problema</a>
+            <a href="#solucoes">Soluções</a>
+            <a href="#curiosidades">Curiosidades</a>
+            <a href="#quiz">Quiz</a>
+        </nav>
 
-    <p>
-        A agricultura utiliza muita água para produzir alimentos.
-        Quando ela é desperdiçada, prejudica a natureza e reduz
-        os recursos disponíveis para o futuro.
-    </p>
-</section>
+    </header>
 
-<section class="card">
-    <h2>💧 Como Economizar Água?</h2>
+    <!-- Banner -->
+    <section id="inicio" class="banner">
 
-    <img
-    class="imagem"
-    src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200"
-    alt="Irrigação">
+        <div class="banner-texto">
 
-    <ul>
-        <li>Utilizar irrigação eficiente.</li>
-        <li>Monitorar o consumo de água.</li>
-        <li>Proteger rios e nascentes.</li>
-        <li>Evitar desperdícios.</li>
-    </ul>
-</section>
+            <h2>Cada gota conta!</h2>
 
-<section class="card">
+            <p>
+                A água é essencial para a agricultura e para a vida.
+                Aprenda como evitar o desperdício e construir um futuro sustentável.
+            </p>
 
-    <h2>📝 Quiz da Sustentabilidade</h2>
+        </div>
 
-    <p id="pergunta">
-        Qual atitude ajuda a economizar água na agricultura?
-    </p>
+    </section>
 
-    <button onclick="correta()">
-        Irrigação eficiente
-    </button>
+    <main>
 
-    <button onclick="errada()">
-        Desperdiçar água
-    </button>
+        <!-- Tema -->
 
-    <button onclick="errada()">
-        Poluir rios
-    </button>
+        <section id="tema" class="cartao">
 
-    <p id="resultado"></p>
+            <h2>🌎 Sobre o Tema</h2>
 
-</section>
+            <img class="imagem"
+                src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1200"
+                alt="Plantação agrícola">
 
-</main>
+            <p>
+                A agricultura depende da água para produzir alimentos.
+                Porém, o uso excessivo ou inadequado desse recurso pode
+                causar desperdícios e prejudicar o meio ambiente.
+            </p>
 
-<footer>
-    <p>Projeto Agrinho 2026 - Gabriel Steinck das Neves</p>
-</footer>
+        </section>
 
-<script src="script.js"></script>
+        <!-- Problema -->
+
+        <section id="problema" class="cartao">
+
+            <h2>⚠ O Problema</h2>
+
+            <img class="imagem"
+                src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200"
+                alt="Irrigação agrícola">
+
+            <p>
+                Grande parte da água utilizada na agricultura pode ser
+                desperdiçada quando não há planejamento ou tecnologias adequadas.
+            </p>
+
+            <div class="dados">
+
+                <div class="caixa">
+                    <h3>70%</h3>
+                    <p>da água doce é utilizada pela agricultura.</p>
+                </div>
+
+                <div class="caixa">
+                    <h3>100%</h3>
+                    <p>Todos podem ajudar a economizar água.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Soluções -->
+
+        <section id="solucoes" class="cartao">
+
+            <h2>✅ Soluções Sustentáveis</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <h3>💧 Irrigação Inteligente</h3>
+
+                    <p>
+                        Utilizar sistemas modernos que evitem desperdícios.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>🌱 Preservação</h3>
+
+                    <p>
+                        Cuidar dos rios, lagos e nascentes.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <h3>📚 Educação Ambiental</h3>
+
+                    <p>
+                        Ensinar a importância da economia de água.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Curiosidades -->
+
+        <section id="curiosidades" class="cartao">
+
+            <h2>💡 Você Sabia?</h2>
+
+            <ul>
+                <li>A água é indispensável para a produção de alimentos.</li>
+                <li>Pequenas ações podem economizar milhares de litros.</li>
+                <li>Preservar nascentes ajuda toda a comunidade.</li>
+                <li>A agricultura sustentável protege o futuro.</li>
+            </ul>
+
+        </section>
+
+        <!-- Galeria -->
+
+        <section class="cartao">
+
+            <h2>📷 Galeria</h2>
+
+            <div class="galeria">
+
+                <img src="https://images.unsplash.com/photo-1492496913980-501348b61469?w=800"
+                    alt="Natureza">
+
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800"
+                    alt="Campo">
+
+                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800"
+                    alt="Agricultura">
+
+            </div>
+
+        </section>
+
+        <!-- Quiz -->
+
+        <section id="quiz" class="cartao">
+
+            <h2>📝 Quiz</h2>
+
+            <p id="pergunta">
+                Qual atitude ajuda a economizar água na agricultura?
+            </p>
+
+            <button onclick="correta()">
+                Irrigação eficiente
+            </button>
+
+            <button onclick="errada()">
+                Desperdiçar água
+            </button>
+
+            <button onclick="errada()">
+                Poluir rios
+            </button>
+
+            <p id="resultado"></p>
+
+        </section>
+
+        <!-- Conclusão -->
+
+        <section class="cartao">
+
+            <h2>🌍 Conclusão</h2>
+
+            <p>
+                O uso consciente da água garante uma agricultura mais forte,
+                sustentável e preparada para o futuro.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            Projeto Agrinho 2026 - Vida da Água
+        </p>
+
+        <p>
+            Gabriel Steinck das Neves
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
