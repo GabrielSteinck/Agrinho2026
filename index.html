@@ -1,97 +1,94 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Vida da Água - Agricultura Sustentável</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<main>
 
-    <!-- Botão de acessibilidade fixo -->
-    <div class="acessibilidade" id="acessibilidade">
-        <button id="aumentarFonte" aria-label="Aumentar fonte">A+</button>
-        <button id="diminuirFonte" aria-label="Diminuir fonte">A-</button>
-        <button id="altoContraste" aria-label="Ativar alto contraste">🎨 Contraste</button>
+<section class="banner">
+    <h2>Preservar a água é garantir o futuro</h2>
+    <p>
+        Descubra como a agricultura pode produzir mais
+        utilizando a água de forma consciente.
+    </p>
+</section>
+
+<section id="sobre" class="cartao">
+
+    <h2>O que é o desperdício de água?</h2>
+
+    <img
+    src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=900"
+    alt="Plantação agrícola">
+
+    <p>
+        A agricultura utiliza grande quantidade de água.
+        Quando esse recurso é usado sem planejamento,
+        ocorre desperdício e prejuízo ao meio ambiente.
+    </p>
+
+</section>
+
+<section id="problema" class="cartao">
+
+    <h2>Impactos do desperdício</h2>
+
+    <img
+    src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?w=900"
+    alt="Irrigação agrícola">
+
+    <div class="estatisticas">
+
+        <div class="caixa">
+            <h3>70%</h3>
+            <p>da água doce é utilizada pela agricultura.</p>
+        </div>
+
+        <div class="caixa">
+            <h3>100%</h3>
+            <p>podemos reduzir perdas com boas práticas.</p>
+        </div>
+
     </div>
 
-    <header>
-        <div class="logo">
-            <span class="icone">💧</span>
-            <h1>Vida da Água</h1>
-        </div>
-        <p class="slogan">Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</p>
-    </header>
+</section>
 
-    <nav>
-        <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre o tema</a></li>
-            <li><a href="#problema">Problema ambiental</a></li>
-            <li><a href="#solucoes">Soluções sustentáveis</a></li>
-            <li><a href="#quiz">Quiz</a></li>
-            <li><a href="#conclusao">Conclusão</a></li>
-        </ul>
-    </nav>
+<section id="solucoes" class="cartao">
 
-    <main>
-        <!-- SEÇÃO 1: INÍCIO -->
-        <section id="inicio">
-            <h2>Bem-vindo ao Vida da Água</h2>
-            <p>A água é o recurso mais valioso para a agricultura. Aprenda como usá-la de forma inteligente e sustentável.</p>
-            <!-- Local para sua foto própria -->
-            <img src="https://via.placeholder.com/800x400?text=Coloque+sua+foto+aqui" alt="Agricultura sustentável" class="img-destaque">
-        </section>
+    <h2>Soluções Sustentáveis</h2>
 
-        <!-- SEÇÃO 2: SOBRE O TEMA -->
-        <section id="sobre">
-            <h2>Sobre o tema</h2>
-            <p>A agricultura consome cerca de 70% de toda a água doce utilizada no mundo. Com técnicas corretas, é possível produzir mais com menos água.</p>
-        </section>
+    <div class="cards">
 
-        <!-- SEÇÃO 3: PROBLEMA AMBIENTAL -->
-        <section id="problema">
-            <h2>Problema ambiental: desperdício de água na agricultura</h2>
-            <p>O desperdício ocorre por irrigação ineficiente, vazamentos, falta de planejamento e uso excessivo. Isso afeta rios, nascentes e o futuro da produção de alimentos.</p>
-        </section>
+        <article class="card">
+            <h3>💧 Irrigação Inteligente</h3>
+            <p>Evita desperdícios e melhora a produção.</p>
+        </article>
 
-        <!-- SEÇÃO 4: SOLUÇÕES SUSTENTÁVEIS -->
-        <section id="solucoes">
-            <h2>Soluções sustentáveis</h2>
-            <ul>
-                <li>💧 Irrigação por gotejamento</li>
-                <li>💧 Captação de água da chuva</li>
-                <li>💧 Reúso de água na propriedade</li>
-                <li>💧 Monitoramento da umidade do solo</li>
-                <li>💧 Planejamento do plantio conforme as chuvas</li>
-            </ul>
-        </section>
+        <article class="card">
+            <h3>🌱 Preservação</h3>
+            <p>Proteção de rios, lagos e nascentes.</p>
+        </article>
 
-        <!-- SEÇÃO 5: QUIZ (FUNCIONALIDADE PRINCIPAL) -->
-        <section id="quiz">
-            <h2>Quiz: Como evitar o desperdício de água na agricultura?</h2>
-            <p>Responda as 5 perguntas abaixo e veja quanto você aprendeu.</p>
+        <article class="card">
+            <h3>📚 Educação Ambiental</h3>
+            <p>Conscientização de agricultores e estudantes.</p>
+        </article>
 
-            <div id="quizContainer">
-                <!-- As perguntas serão inseridas via JavaScript -->
-            </div>
+    </div>
 
-            <button id="enviarQuiz" class="botao">Enviar respostas</button>
-            <div id="resultadoQuiz"></div>
-        </section>
+</section>
 
-        <!-- SEÇÃO 6: CONCLUSÃO -->
-        <section id="conclusao">
-            <h2>Conclusão</h2>
-            <p>Com pequenas mudanças no campo, é possível economizar água, proteger o meio ambiente e garantir uma agricultura forte para o futuro. Você faz parte dessa mudança!</p>
-        </section>
-    </main>
+<section id="quiz" class="cartao">
 
-    <footer>
-        <p>Projeto desenvolvido por Gabriel Steinck das Neves - Concurso Agrinho 2026</p>
-        <p>Tema: Agro forte, futuro sustentável | 🌱 Vida da Água</p>
-    </footer>
+    <h2>Teste seus conhecimentos</h2>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <div id="area-quiz">
+
+        <p id="pergunta"></p>
+
+        <button class="opcao"></button>
+        <button class="opcao"></button>
+        <button class="opcao"></button>
+
+        <p id="resultado"></p>
+
+    </div>
+
+</section>
+
+</main>
