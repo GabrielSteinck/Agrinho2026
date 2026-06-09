@@ -1,1 +1,224 @@
+/* ESTILO PADRÃO - Vida da Água */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f9f0;
+    color: #1a3b2f;
+    line-height: 1.6;
+    font-size: 100%;
+    transition: all 0.3s ease;
+}
+
+/* CORES PRINCIPAIS: VERDE E AZUL */
+header {
+    background: linear-gradient(135deg, #0f5c3f, #1f7a5a);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.icone {
+    font-size: 3rem;
+}
+
+.slogan {
+    margin-top: 0.8rem;
+    font-style: italic;
+}
+
+nav {
+    background-color: #1e6b5e;
+    padding: 0.8rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1.2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #0d463d;
+}
+
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 1.8rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-left: 8px solid #1f7a5a;
+}
+
+h2 {
+    color: #0c5e45;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #9ad4c2;
+    display: inline-block;
+}
+
+.img-destaque {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-top: 1rem;
+}
+
+ul {
+    margin-left: 1.8rem;
+}
+
+li {
+    margin: 0.6rem 0;
+}
+
+.botao {
+    background-color: #1f7a5a;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 1rem;
+}
+
+.botao:hover {
+    background-color: #0e5a42;
+}
+
+#quizContainer {
+    background-color: #e6f4ef;
+    padding: 1.2rem;
+    border-radius: 20px;
+}
+
+.pergunta {
+    margin-bottom: 1.8rem;
+}
+
+.pergunta p {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.pergunta label {
+    display: block;
+    margin: 0.3rem 0;
+}
+
+#resultadoQuiz {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #0c3b30;
+    color: #cfe9e0;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* BOTÃO DE ACESSIBILIDADE FIXO */
+.acessibilidade {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+    background: rgba(0,0,0,0.6);
+    padding: 8px 12px;
+    border-radius: 40px;
+    z-index: 1000;
+}
+
+.acessibilidade button {
+    background: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.acessibilidade button:hover {
+    background: #ddd;
+}
+
+/* MODO ALTO CONTRASTE */
+.alto-contraste {
+    background-color: black !important;
+    color: yellow !important;
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste nav,
+.alto-contraste section {
+    background-color: black !important;
+    color: yellow !important;
+    border-color: yellow !important;
+}
+
+.alto-contraste a,
+.alto-contraste button {
+    color: yellow !important;
+    background-color: black !important;
+    border: 1px solid yellow !important;
+}
+
+/* RESPONSIVO */
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        flex-direction: column;
+    }
+
+    section {
+        padding: 1.2rem;
+    }
+
+    .acessibilidade {
+        bottom: 10px;
+        right: 10px;
+    }
+}
